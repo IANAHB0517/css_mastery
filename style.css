@@ -1,30 +1,30 @@
 .grid{
     display:grid;
     grid-template-columns: repeat(4,200px);
-    grid-template-rows: 100px repeat(2,300px) 50px ;
-    grid-template-areas:
-    "header header header header"
-    "content content content nav"
-    "content content content nav"
-    "footer footer footer footer"
+    grid-template-rows: repeat(4,200px);
 }
+    
 
 .header{
     background-color: #2ecc2e;
-    grid-area:header;
+    grid-column: span 4;
+   
 }
 
 .content{
     background-color: #343681;
-    grid-area:content;
+    grid-column: 1 /-2;
+    grid-row:span 2;
+ 
 }
 
 .nav{
     background-color: #6a456e;
-    grid-area:nav;
+    grid-row:span 2;
+
 }
 
 .footer{
     background-color: #5eccde;
-    grid-area:footer;
+    grid-column: span 4;
 }
