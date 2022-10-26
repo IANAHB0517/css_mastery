@@ -1,4 +1,30 @@
-body{
-    background-color: rgba(24, 199, 91, 0.867);
-    
+.grid{
+    display:grid;
+    grid-template-columns: repeat(4,200px);
+    grid-template-rows: 100px repeat(2,300px) 50px ;
+    grid-template-areas:
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer"
+}
+
+.header{
+    background-color: #2ecc2e;
+    grid-area:header;
+}
+
+.content{
+    background-color: #343681;
+    grid-area:content;
+}
+
+.nav{
+    background-color: #6a456e;
+    grid-area:nav;
+}
+
+.footer{
+    background-color: #5eccde;
+    grid-area:footer;
 }
